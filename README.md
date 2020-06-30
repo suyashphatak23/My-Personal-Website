@@ -18,3 +18,8 @@ frontend be plan B for my career.
 
 <img src="https://github.com/suyashphatak23/My-Personal-Website/blob/master/Imgs/Project/web.JPG" title="Website Screenshot" style="width:100%;height:auto;" alt="Website Screenshot">
 
+# License
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+**[GNU license](https://opensource.org/licenses/gpl-license)**
