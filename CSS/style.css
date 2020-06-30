@@ -1,0 +1,1290 @@
+/* Gloabal Settings */
+body{
+    overflow-x: hidden;
+    font-family: "Times", sans-serif;
+}
+
+/* backface visibility */
+div{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* For nav links */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Scrolling Effect */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Color for bold tags */
+b{
+    color: black;
+}
+
+/* Padding for container */
+.container{
+    padding: 2em;
+}
+
+
+
+
+
+/* Side Navigation bar Start*/
+#navigationscroll{
+    position: fixed;
+    top: 50%;
+    right: 60px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 122px;
+    height: 380px;
+    z-index: 10;
+    -webkit-transition: .4s linear;
+    transition: .4s linear;
+    display: none;
+}
+
+#navigationsidebuttongroup{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    max-width: 80%;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+    -webkit-transition: .4s linear;
+    transition: .4s linear;
+}
+
+.navsidebuttons{
+    font-size: 15px;
+    color: #c8c8c8;
+    text-align: end;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    padding: 10px 0;
+    letter-spacing: 1px;
+}
+
+.navsidebuttons:hover{
+    text-decoration: none;
+    color: #666565;
+}
+
+.navheading{
+    margin: 0;
+}
+
+.navright{
+    position: absolute;
+    right: 0;
+    border-radius: 1px;
+    width: 3px;
+    height:6px;
+    margin-top: -15px;
+    margin-right: -20px;
+    background: #c8c8c8;
+}
+/* Side Navigation Bar End */
+
+
+
+
+
+
+
+
+
+
+/* Banner or Homescreen  Start*/
+/* Parallex Image */
+.homescreen{
+  background-image: url("/Imgs/Parallax/s2-1.png");
+  height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Top buttons */
+#welcome{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 45px;
+}
+
+.navstyle{
+    font-size: 20px;
+    font-family: 'Raleway', serif;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    color: black; 
+    padding: 10px;
+    position: relative;
+}
+
+/* Hovering Effect on navbar */
+.navstyle::before,
+.navstyle::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+.navstyle::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    transform: translate(-100%, 50%);
+}
+
+.navstyle:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #000000;
+    border-left: 3px solid #000000;
+    transform: translate(100%, -50%);
+}
+
+.navstyle:hover:before,
+.navstyle:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+    transition: .6s ease;
+}
+
+.navstyle:hover{
+    color: #000;
+    font-weight: bold;
+}
+
+/* Social Media Icons */
+#social-item a {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+  
+#social-item a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+  
+#social-item a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+  
+#social-item a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+  
+#social-item a:hover:before {
+    top: 0;
+}
+  
+#social-item:nth-child(1) a:before{
+    background: #0077b5;
+}
+  
+#social-item:nth-child(2) a:before{
+    background: #000;
+}
+  
+#social-item:nth-child(3) a:before {
+    background: #3b5999;
+}
+
+
+
+
+
+
+/* Homescreen Text */
+#hi{
+    font-size: 32px;
+    padding: 10px;
+    font-weight: 500;
+    text-align: center;
+    position: absolute;
+    left: 8em;
+    top: 4em;
+    width: 100%;
+}
+
+.messagespan{
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Setting For Hovering Messages */
+#messages{
+    font-size: 25px;
+    text-align: end;
+    color: black;
+    padding-top: 5em;
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+}
+
+.span{
+    margin-top: 1em;
+}
+/* Banner or Homescreen End */
+
+
+
+/* Image Holder */
+.image-holder{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transform: translate(5px,-211px);
+}
+
+
+
+
+
+
+/* Intro Section Start */
+#intro{
+    padding-bottom: 3em;
+}
+
+#scrollDown{
+	border-radius: 50%;
+	border: 2px solid transparent;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0 auto 0 auto;
+	z-index: 40;
+	color: black;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.1s linear;
+}
+
+#scrollDown > div {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	height: 0px;
+	width: 300px;
+	border-left: 3px solid black;
+	transform: translateX(-2px);
+	transition: 0.15s linear;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+#scrollDown > div > p {
+	position: absolute;
+	top: 5px;
+	left: -100%;
+}
+
+#scrollDown > i {
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 40px;
+}
+
+#scrollDown:hover div{
+	height: 45px;
+}
+
+#scrollDown:hover div > p{
+	animation-name: showFromLeft;
+	animation-delay: 0.25s;
+	animation-duration: 0.4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes showFromLeft{
+	0%   {left: -100%;}
+	100%   {left: 15px;}
+}
+/* Intro Section End */
+
+
+
+
+
+
+
+/* About Section Start */
+.about{
+    text-align: center;
+    line-height: 1.5;
+    z-index: 1;
+}
+
+#aboutme{
+    font-size: 42px;
+    padding: 0.5em;
+    padding-bottom: 1em;
+    font-weight: 400;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.abouttext{
+    font-weight: 400;
+    font-size: 16px;
+    color: #646464;
+    text-align: left;
+    line-height: 32px;
+    padding-left: 10em;
+    padding-right: 10em;
+    font-family: 'Raleway', serif;
+}
+
+.description-link{
+    color:#646464;
+}
+
+.description-link:hover{
+    text-decoration: none;
+    color: green;
+}
+
+
+/*  Resume Button Style */
+.resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 250px;
+    height: 250px;
+    background: rgb(252, 247, 247);
+    border-radius: 75px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+    text-decoration: none;
+    color:black;
+}
+  
+.resume:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+    text-decoration: none;
+}
+  
+.resume:hover:before, .resume:hover:after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+    text-decoration: none;
+}
+  
+.resume:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+    text-decoration: none;
+}
+
+/* For Color Animation on border */
+@keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+}
+  
+@keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+}
+
+/* About Section End */
+
+
+
+
+
+
+
+
+
+/* Education Section Start */
+.education{
+    background-color: black;
+    color: white;
+    height: 1000px;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Programming Languages Section */
+.educationleftheading{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    border-right: 2px solid white;
+    text-align: end;
+    padding-right: 10px;
+    letter-spacing: 3px;
+}
+
+.red{
+    color: red;
+    text-align: end;
+}
+
+.educationlefttext{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: end;
+    margin-top: 2em;
+    color: #fff;
+    margin-bottom: 1em;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+/* Education Description Section */
+.educationrightheading{
+    font-family: 'Playfair display', sans-serif;
+    font-size: 42px;
+    padding: 20px 20px 20px 10px;
+}
+
+.educationtext{
+    font-family: 'Raleway', serif;
+    font-size: 16px;
+    padding: 20px 20px 20px 10px;
+    line-height: 32px;
+    width: 600px;
+}
+
+.educationborder{
+    width: 50px;
+    border-top: 3px solid white;
+    margin-left: 10px;
+}
+
+.diamond{
+    position: absolute;
+    -webkit-transform: translateY(-438px) translateX(-43px) rotateZ(45deg);
+    transform: translateY(-438px) translateX(-43px) rotateZ(45deg);
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    background: #000;
+}
+
+.dot1{
+    position: absolute;
+    -webkit-transform: translateY(15px) translateX(-40px);
+    transform: translateY(15px) translateX(-40px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    opacity: 1;
+    background: #000;
+}
+
+.dot2{
+    position: absolute;
+    -webkit-transform: translateY(76px) translateX(-40px);
+    transform: translateY(76px) translateX(-40px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    opacity: 1;
+    background: #000;
+}
+
+.dot3{
+    position: absolute;
+    -webkit-transform: translateY(140px) translateX(-40px);
+    transform: translateY(140px) translateX(-40px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    opacity: 1;
+    background: #000;
+}
+
+/* Education Description Section End */
+
+
+
+
+/* College Image Start */
+#eduPeriscopeWrapper{
+    clear:both;
+    margin:0;
+    position:relative;
+    width:100%;
+    z-index:2;
+    background-color: black;
+}
+
+#eduLowerBackground{
+    position:absolute;
+    bottom:0;
+    background-color:#fff;
+    width:100%;
+    height:50%;
+}
+    
+#eduTimelineWrapper,.eduPeriscope{
+    position:relative;
+}
+
+.eduPeriscope{
+    margin:0 auto;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+    overflow:hidden;
+    z-index:3;
+    -webkit-transition:2s linear;
+    transition:2s linear;
+    background:url(/Imgs/college/clg1.JPG) center fixed;
+    background-size:cover;
+}
+
+#eduTimelineWrapper{
+    width:100%;
+    background-color:#fff;
+    padding-top:60px;
+    padding-bottom:50px;
+    margin:0;
+    z-index:3
+}
+/* College Image End */
+
+
+
+
+
+
+
+/* College Courses Section Start */
+.headingname{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.headinglocation{
+    color: #646464;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-family: 'Raleway', serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0;
+}
+
+.headingcourses{
+    line-height: 24px;
+    color: #000;
+    font-family: 'Raleway',serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    border: 1px solid #000;
+    border-radius: 100px;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.yearheading{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 2em;
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+.carddot1{
+    position: absolute;
+    -webkit-transform: translateY(-1180px) translateX(-25px);
+    transform: translateY(-1180px) translateX(-25px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    opacity: 1;
+    background: #fff;
+}
+
+.carddot2{
+    position: absolute;
+    -webkit-transform: translateY(-975px) translateX(-25px);
+    transform: translateY(-975px) translateX(-25px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    opacity: 1;
+    background: #fff;
+}
+
+.carddot3{
+    position: absolute;
+    -webkit-transform: translateY(-773px) translateX(-25px);
+    transform: translateY(-773px) translateX(-25px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    opacity: 1;
+    background: #fff;
+}
+
+.carddot4{
+    position: absolute;
+    -webkit-transform: translateY(-568px) translateX(-25px);
+    transform: translateY(-568px) translateX(-25px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    opacity: 1;
+    background: #fff;
+}
+
+.carddot5{
+    position: absolute;
+    -webkit-transform: translateY(-365px) translateX(-25px);
+    transform: translateY(-365px) translateX(-25px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    opacity: 1;
+    background: #fff;
+}
+
+.carddot6{
+    position: absolute;
+    -webkit-transform: translateY(-160px) translateX(-25px);
+    transform: translateY(-160px) translateX(-25px);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    opacity: 1;
+    background: #fff;
+}
+
+.tab-content{
+    border: 1px solid black;
+}
+
+#pillssc, #pillhsc, #pill1, #pill3, #pill5, #pill7{
+    border: 1px solid black;
+    border-radius: 0;
+    border-bottom: 0;
+}
+
+#pill2, #pill4, #pill6, #pill8{
+    border: 1px solid black;
+    border-radius: 0;
+    border-left: 0;
+    border-bottom: 0;
+}
+/* College Courses Section End */
+/* Education Section End */
+
+
+
+
+
+
+
+
+/* Certificates Section Start */
+.certificates{
+    padding-top: 1em;
+    padding-bottom: 10em;
+    z-index: 5;
+}
+
+.certification-heading{
+    text-align: center;
+    font-size: 42px;
+    z-index: 4;
+    font-weight: 400;
+    font-family: "Playfair Display", sans-serif;
+    letter-spacing: -1px;
+}
+
+#rounded-cards{
+    position: absolute;
+    z-index: 5;
+    transform: translateY(30px);
+    left: 15%;
+}
+
+/* Certification slider */
+.round .content {
+	height: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.round {
+	width: 250px;
+	height: 250px;
+	box-sizing: border-box;
+    padding: 15px;
+    margin: 0 25px;
+	position: relative;
+	overflow: hidden;
+    border-radius:50%;
+    cursor: pointer;
+}
+
+.round::before {
+	content: '';
+	position: absolute;
+	width: 150%;
+    height: 150%;
+    cursor: pointer;	
+}
+
+.round:hover::before{
+	content: '';
+	background: repeating-linear-gradient(
+			black 0%,
+			red 7.5px,
+			pink 7.5px,
+			black 15px,
+			white 15px,
+			white 22.5px,
+			black 22.5px,
+			black 30px);
+    transform: translateX(-20%) translateY(-20%) rotate(-90deg);
+    animation: animate 20s linear infinite;
+    cursor: pointer;
+}
+
+.content {
+	position: relative;
+	background-color: white;
+    border-radius: 50%;
+	text-align: center;
+	font-family: sans-serif;
+	z-index: 2;
+	box-shadow: 0 0 2px rgb(85, 84, 84),
+				0 0 5px rgb(48, 44, 44),
+				inset 0 0 5px rgb(75, 69, 69);
+    font-size:16px;
+    font-weight:400;
+}
+
+.content-text{
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+@keyframes animate {
+	from {
+		background-position: 0;
+	}
+
+	to {
+		background-position: 0 450px;
+	}
+}
+
+/* Slider Settings */
+.slider-border{
+    width: 100%;
+    height: 10px;
+    border-top: 2px solid black;
+    position: absolute;
+    transform: translateY(160px);
+}
+
+#certificate-slider{
+    display:none;
+    margin-top: 15em;
+    padding-top: 5em;
+    z-index: 2;
+}
+
+.certificates-heading{
+    font-size: 30px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#certificate-arrow1, #certificate-arrow2{
+    opacity: 1;
+    padding: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+#certificate-arrow1{
+    transform: translateX(-125px);
+}
+
+#certificate-arrow2{
+    transform: translateX(125px);
+}
+
+#certificate-arrow1:hover{
+    color: orangered;
+    transition: .2s linear;
+}
+
+#certificate-arrow2:hover{
+    color: orangered;
+    transition: .2s linear;
+}
+/* Certification Section End */
+
+
+
+
+
+/* Project Section Start */
+.projects{
+    background-color: black;
+    color: white;
+    padding-top: 12em;
+    padding-bottom: 1em;
+    z-index: 3;
+    position: relative;
+    transform: translate3d(0,0,0);
+}
+
+.project-section-heading{
+    text-align: center;
+    font-size: 42px;
+    z-index: 4;
+    font-weight: 400;
+    font-family: "Playfair Display", sans-serif;
+    letter-spacing: -1px;
+    margin-bottom: 2em;
+}
+
+/* Carousel */
+.carousel{
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    min-height: 700px;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+
+.img-wrapper img{
+    height:auto ;
+    width:90%;
+}
+
+/*Prev & Next Icons Start*/
+#project-arrow{
+    opacity: 1;
+    height: 50px;
+    padding: 10px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transform: translateY(330px);
+}
+
+#project-arrow:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: .3s linear;
+}
+
+#project-arrow:hover{
+    background-color: white;
+    color: rgb(24, 7, 7);
+    border: 1px solid black;
+    transition: .3s linear;
+}
+/* Prev & Next Icons End*/
+
+/* Project Description Start*/
+#project-description{
+    padding: 5em;
+    padding-left: 5.6em;
+    padding-top: 3em;
+}
+
+
+.project-heading{
+    font-size: 28px;
+}
+
+.project-type{
+    font-style: normal;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    font-size: 16px;
+}
+
+.project-description{
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 1rem;
+}
+
+.project-border{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 5px;
+    border-bottom: 3px solid white;
+    width: 20%;
+}
+
+.project-tools{
+    font-style: normal;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    font-size: 16px;
+}
+
+.project-languages{
+    margin-top: 1em;
+}
+/* Project Description End*/
+/* Project Section End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Start */
+
+/* Section Heading */
+#contact{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    padding: 2em;
+}
+
+/* Mail Link */
+.mailmessage{
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 0.8em;
+    margin-top: 0.5em;
+    color: #000;    
+}
+
+#contactHeaderLine{
+    border-radius: 38px;
+    width: 103px;
+    border-bottom: 4px solid #c8c8c8;
+    position: relative;
+    right: 50%;
+    left: 52.5%;
+}
+
+#mail{
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 0 20px;
+}
+
+#mail:hover{
+    color: gray;
+}
+
+
+
+/* Social Media Links and Heading */
+.border-front{
+    width: 40px;
+    border-bottom: 2px solid #000;
+    transform: translate(175px,13px);
+}
+
+.border-back{
+    width: 40px;
+    border-bottom: 2px solid #000;
+    transform: translate(377px,-12px);;
+}
+
+.social{
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Social Media Glowing Effects */
+
+.footer-social{
+    display: flex;
+    position:absolute;
+    transform: translateX(180px);
+    margin-bottom: 2rem;
+}
+  
+.footer-icon{
+    list-style: none;
+    margin: 0 5px;
+}
+  
+.footer-icon a {
+    position: relative; 
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    transition: .5s;
+    border: 1px solid black;
+}
+  
+.footer-icon a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+  
+.footer-icon a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffee10;
+    background: black;
+    border: 1px solid white;
+}
+  
+.footer-icon a:hover {
+    color: #ffee10;
+    box-shadow: 0 0 5px #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+    background: black;
+    border: 1px solid white;
+}
+
+/* Copyright Text */
+#copyright{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    z-index: -2;
+    position: relative;
+    top: 5em;
+}
+
+#copyright:hover{
+    color: black;
+}
+
+/* Top Button Style */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: 2px solid black;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 15px 26px;
+    border-radius: 50%;
+}
+  
+#topBtn:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid orangered;
+    transition: .5s ease;
+}
+/* Footer End */
