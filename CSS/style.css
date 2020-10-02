@@ -115,7 +115,7 @@ b{
 /* Banner or Homescreen  Start*/
 /* Parallex Image */
 .homescreen{
-  background-image: url("/Imgs/Parallax/s2-1.png");
+  background-image: url("https://github.com/suyashphatak23/My-Personal-Website/blob/master/Imgs/Parallax/s2-1.png");
   height: 800px;
   background-attachment: fixed;
   background-position: center;
@@ -681,7 +681,7 @@ b{
     z-index:3;
     -webkit-transition:2s linear;
     transition:2s linear;
-    background:url(/Imgs/college/clg1.JPG) center fixed;
+    background:url(https://github.com/suyashphatak23/My-Personal-Website/blob/master/Imgs/college/clg1.jpg) center fixed;
     background-size:cover;
 }
 
